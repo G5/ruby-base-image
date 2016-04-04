@@ -14,9 +14,9 @@ RUN \
 # for postgres gem
     libpq-dev \
 # updated SSL root certs
-    ca-certificates && \
+    ca-certificates \
 # pretty much no asset pipeline without this
-  apt-get install -y nodejs
+    nodejs
 
 ENV RACK_ENV="production" \
     RAILS_ENV="production"
