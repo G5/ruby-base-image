@@ -1,6 +1,8 @@
 ## Ruby Base Image
 
-The Ruby base image descends from the official Ruby image. The base image uses debian, and we install a number of universal (or nearly so) libraries that child images probably need.
+[![Docker Hub](https://img.shields.io/badge/docker-ready-blue.svg)](https://hub.docker.com/r/g5search/ruby-base/)
+
+The `g5search/ruby-base` Docker image descends from the official Ruby image. The parent image uses debian, and we install a number of universal (or nearly so) libraries that child images probably need.
 
 ### Gemfury Token
 
