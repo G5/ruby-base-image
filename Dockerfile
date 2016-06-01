@@ -1,4 +1,4 @@
-FROM ruby:2.3
+FROM ruby:2.3.1
 
 MAINTAINER G5 Engineering <engineering@getg5.com>
 
