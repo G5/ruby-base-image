@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.4] - 2017-01-09
+### Changed
+- Upgrade to Ruby 2.4.0.
+
+## [1.0.3] - 2017-01-09
+### Changed
+- Upgrade to Ruby 2.3.3.
+
 ## [1.0.2] - 2016-08-02
 ### Changed
 - Bump to force upgrade ca-certificates.
