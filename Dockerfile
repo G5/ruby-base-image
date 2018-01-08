@@ -13,10 +13,14 @@ RUN \
     libffi-dev \
 # for postgres gem
     libpq-dev \
-# updated SSL root certs
-    ca-certificates \
 # pretty much no asset pipeline without this
     nodejs
+
+# updated SSL root certs. The CACHE_BUSTER is to allow us to re-generate these
+# images periodically and have them correctly pull new certificates even when
+# there are no meaningful changes in the Dockerfile. You have to bump the
+# CACHE_BUSTER if you haven't changed anything in this file above this line.
+RUN CACHE_BUSTER=1 apt-get install -y ca-certificates
 
 ENV RACK_ENV="production" \
     RAILS_ENV="production" \
