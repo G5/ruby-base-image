@@ -1,6 +1,6 @@
 FROM ruby:2.4.2 
 
-MAINTAINER G5 Engineering <engineering@getg5.com>
+MAINTAINER G5 DevOps <devops@getg5.com>
 
 # otherwise can see some encoding issues:
 # https://oncletom.io/2015/docker-encoding/
