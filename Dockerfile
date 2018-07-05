@@ -24,7 +24,9 @@ RUN \
 # source, not from the official Debian pacakages (too old for yarn).
     nodejs \
 # required for rails 5 asset pipeline
-    yarn && \
+    yarn \
+# gives us nslookup and friends for the CI pipeline
+    dnsutils netcat && \
 # clean up apt cache
   rm -rf /var/lib/apt/lists/*
 
@@ -36,5 +38,8 @@ RUN CACHE_BUSTER=1 apt-get install -y ca-certificates
 
 ENV RACK_ENV="production" \
     RAILS_ENV="production" \
+# Yarn pays attention to this
+    NODE_ENV="production" \
+# Rails 5 new configuration magic
     RAILS_LOG_TO_STDOUT="true" \
     RAILS_SERVE_STATIC_FILES="true"
