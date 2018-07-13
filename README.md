@@ -4,9 +4,18 @@
 
 The `g5search/ruby-base` Docker image descends from the official Ruby image. The parent image uses debian, and we install a number of universal (or nearly so) libraries that child images probably need.
 
-### Releases
+### Versions
 
-This image uses Docker Hub automated builds and is integrated with GitHub. Create a release in GitHub using a semantic versioning tag like `v1.2.3` and Docker will build the image for you, tagging it identically in Docker as it was tagged in git. It will respect pre-release tags like `v1.2.3-beta.1` if you are wary of releasing your image into the wild.
+We maintain images for a couple of Ruby versions. Versions are delineated via tags:
+
+  - `2.3-vX.X.X` Ruby 2.3 image series. Built from the `ruby23.dockerfile`, releases triggered when a git tag is created with the `2.3-vX.X.X` naming convention. Ruby 2.3 will be updated for security until March 2019. This was chosen as our "legacy" Ruby version to support because it is relatively easy to upgrade to from 2.0 - 2.2. Ruby 2.4 introduces number changes that often require significant gem updates, which is often a hassle for older applications.
+  - `2.5-vX.X.X` Ruby 2.5 image series. Built from the `ruby25.dockerfile`, releases triggered when a git tag is created with the `2.5-vX.X.X` naming convention. As of this writing, this is the current version of Ruby. If Ruby 2.6 does not introduce any troublesome changes, this version will likely be sunset in favor of a 2.6 image.
+
+## Releases
+
+The Docker Hub builds images via automated builds, and respects Semantic Version (with our Ruby version prefix). As an example, you can create a `2.5-v2.0.0-beta.1` image if you want to create a beta base image to test upcoming changes.
+
+Create a GitHub release with information about any changes you've made. The semver of the different tags are independent of each other and unrelated. If we have `2.5-v1.20.0` when Ruby 2.6 comes out, the first version of that new image should be `2.6-v1.0.0`. There is significant duplication between the Dockerfiles, so ensure you've considered all maintained versions when you make updates to any of the Dockerfiles.
 
 ### Gemfury Token
 
