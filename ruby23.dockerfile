@@ -1,4 +1,4 @@
-FROM ruby:2.3.1
+FROM ruby:2.3.7
 
 MAINTAINER G5 DevOps <devops@getg5.com>
 
