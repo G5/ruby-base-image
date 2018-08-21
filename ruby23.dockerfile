@@ -42,4 +42,8 @@ ENV RACK_ENV="production" \
     NODE_ENV="production" \
 # Rails 5 new configuration magic
     RAILS_LOG_TO_STDOUT="true" \
-    RAILS_SERVE_STATIC_FILES="true"
+    RAILS_SERVE_STATIC_FILES="true" \
+# Don't use spring under any circumstances. We don't want it, and certain
+# versions also conflict with the BUNDLE_APP_CONFIG that is part of the
+# official Ruby image
+    DISABLE_SPRING="true"
