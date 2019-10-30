@@ -8,9 +8,9 @@ The `g5search/ruby-base` Docker image descends from the official Ruby image. The
 
 We maintain images for a couple of Ruby versions. Versions are delineated via tags:
 
-  - `2.3-vX.X.X` Ruby 2.3 image series. Built from the `ruby23.dockerfile`, releases triggered when a git tag is created with the `2.3-vX.X.X` naming convention. Ruby 2.3 will be updated for security until March 2019. This was chosen as our "legacy" Ruby version to support because it is relatively easy to upgrade to from 2.0 - 2.2. Ruby 2.4 introduces number changes that often require significant gem updates, which is often a hassle for older applications.
-  - `2.4-vX.X.X` Ruby 2.4 image series. Built from the `ruby24.dockerfile`, releases triggered when a git tag is created with the `2.4-vX.X.X` naming convention. Ruby 2.4 is only in security maintenance phase and will EOL March 2020. It is recommended to move to a higher version.
-  - `2.5-vX.X.X` This image series is retired from support by DevOps 10/2019.
+  - `2.3-vX.X.X` Ruby 2.3 image series. Built from the `ruby23.dockerfile`, releases triggered when a git tag is created with the `2.3-vX.X.X` naming convention. Ruby 2.3 is no longer supported for security updates. This was originally chosen as our "legacy" Ruby version to support because it is relatively easy to upgrade to from 2.0 - 2.2. Ruby 2.4 introduces number changes that often require significant gem updates, which is often a hassle for older applications. 
+  - `2.4-vX.X.X` This image series was retired from support by Devops in 2018 due to the preferred upgrade from 2.3 - 2.5.
+  - `2.5-vX.X.X` This image series is retired from support by DevOps 10/2019. Existing 2.5 docker hub images should continue to be available.
   - `2.6-vX.X.X` Ruby 2.6 image series. Built from the `ruby26.dockerfile`, releases triggered when a git tag is created with the `2.6-vX.X.X` naming convention. As of this writing, this is the current version of Ruby.
   - `2.7-vX.X.X` Ruby 2.7 is not ready yet, it is in preview as of 10/2019.
 
