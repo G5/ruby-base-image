@@ -29,7 +29,7 @@ RUN \
     dnsutils netcat \
     # alternate memory allocator that plays nicer with larger Ruby applications.
     # Only used if LD_PRELOAD environment variable is set!
-    libjemalloc1 && \
+    libjemalloc2 && \
     # clean up apt cache
     rm -rf /var/lib/apt/lists/*
 
