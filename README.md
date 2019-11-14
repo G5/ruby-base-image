@@ -6,9 +6,9 @@ The `g5search/ruby-base` Docker image descends from the official Ruby image. The
 
 ## Versions
 
-We maintain images for several versions of Ruby. Our versioning scheme is the Ruby major/minor version, followed by a semantic version starting at 1.0.0 for each Ruby version (e.g. `2.6-v1.0.0`, `2.6-v1.0.3`). 
+We maintain images for several versions of Ruby. Our versioning scheme is the Ruby major/minor version, followed by a semantic version starting at 1.0.0 for each Ruby version (e.g. `2.6-v1.0.0`, `2.5-v1.0.3`). 
 
-> **Why not just tag your images with the Ruby version?** Most of our Docker image releases just bump Ruby versions as they come out, but occasionally we tag releases that only update other software (SSL certificates, Postgres drivers). If we had a Docker image tagged `2.6.3` when Ruby 2.6.3 came out, but then wanted to release a new image with an upgraded version of Node, what would we tag it? It can't be `2.6.4`, the Ruby version is still 2.6.3. Would we call it `2.6.4.1`? That's not valid semver. `2.6.4-v2` or something might work, but [the Semver spec says](https://semver.org/#backusnaur-form-grammar-for-valid-semver-versions) anything after `-` is for pre-release version, not a post-release version.
+> **Why not just tag your images with the Ruby version?** Most of our Docker image releases just bump Ruby versions as they come out, but occasionally we tag releases that only update other software (SSL certificates, Postgres drivers). If we had a Docker image tagged `2.6.3` when Ruby 2.6.3 came out, but then wanted to release a new image with an upgraded version of Node, what would we tag it? It can't be `2.6.4`, the Ruby version is still 2.6.3. Would we call it `2.6.3.1`? That's not valid semver. `2.6.3-v2` or something might work, but [the Semver spec says](https://semver.org/#backusnaur-form-grammar-for-valid-semver-versions) anything after `-` is for pre-release version, not a post-release version.
 
 ### Actively Maintained
 
