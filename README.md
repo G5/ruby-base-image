@@ -13,8 +13,9 @@ We maintain images for several versions of Ruby. Our versioning scheme is the Ru
 ### Actively Maintained
 
   - `2.3-vX.X.X` Ruby 2.3 image series. Built from the `ruby23.dockerfile`, releases triggered when a git tag is created with the `2.3-vX.X.X` naming convention. Ruby 2.3 is no longer supported for security updates. This was originally chosen as our "legacy" Ruby version to support because it is relatively easy to upgrade to from 2.0 - 2.2. Ruby 2.4 introduces number changes that often require significant gem updates, which is often a hassle for older applications. 
-  - `2.6-vX.X.X` Ruby 2.6 image series. Built from the `ruby26.dockerfile`, releases triggered when a git tag is created with the `2.6-vX.X.X` naming convention. As of this writing, this is the current version of Ruby.
-  
+  - `2.6-vX.X.X` Ruby 2.6 image series. Built from the `ruby26.dockerfile`, releases triggered when a git tag is created with the `2.6-vX.X.X` naming convention.
+  - `2.7-vX.X.X` Ruby 2.6 image series. Built from the `ruby27.dockerfile`, releases triggered when a git tag is created with the `2.7-vX.X.X` naming convention. As of this writing, this is the current version of Ruby.
+
 ### Retired
 
 Retired images are still available for use, but we are no longer releasing new versions of the image when new Ruby versions are released. Upgrade to an actively maintained image variant.
