@@ -11,7 +11,7 @@ RUN \
     # source: https://github.com/nodesource/distributions#installation-instructions
     curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
     # Add apt source for Yarn, which is too new to have a useful version in apt
-    curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
+    CACHE_BUSTER=1 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
     # Download latest manifests from official and custom sources
     apt-get update && \
