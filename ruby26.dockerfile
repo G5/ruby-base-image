@@ -10,8 +10,11 @@ RUN \
     # For newer version of Node, since the official Debian packaged version is too old to run Yarn.
     # source: https://github.com/nodesource/distributions#installation-instructions
     curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
-    # Add apt source for Yarn, which is too new to have a useful version in apt
-    CACHE_BUSTER=1 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
+    # Add apt source for Yarn, which is too new to have a useful version in apt.
+    # We have had issues with the keys they are using in the Yarn repo, continuously for like a year:
+    # https://github.com/yarnpkg/yarn/issues/7866
+    CACHE_BUSTER=2 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
+    apt-key adv --refresh-keys --keyserver keyserver.ubuntu.com && \
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
     # Download latest manifests from official and custom sources
     apt-get update && \
